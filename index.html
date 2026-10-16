@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>LAYON AI — Studio TikTok</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">L<span>AI</span></div>
+    <div>
+      <h1>LAYON AI</h1>
+      <p>Studio vidéo vertical • prototype gratuit</p>
+    </div>
+    <span class="pill">0 € · sans clé API</span>
+  </header>
+
+  <main class="layout">
+    <section class="panel controls">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ÉTAPE 01</p>
+          <h2>Imagine ta vidéo</h2>
+        </div>
+      </div>
+
+      <label for="theme">Univers visuel</label>
+      <select id="theme">
+        <option value="cyber">Ville cyberpunk</option>
+        <option value="space">Voyage dans l’espace</option>
+        <option value="ocean">Océan magique</option>
+        <option value="aurora">Aurores boréales</option>
+        <option value="dream">Île flottante de rêve</option>
+        <option value="random">Surprise du jour</option>
+      </select>
+
+      <label for="mood">Ambiance</label>
+      <select id="mood">
+        <option value="cinematic">Cinématographique</option>
+        <option value="calm">Calme et relaxante</option>
+        <option value="mystery">Mystérieuse</option>
+        <option value="bright">Colorée et fantastique</option>
+      </select>
+
+      <label for="duration">Durée de la vidéo</label>
+      <select id="duration">
+        <option value="10">10 secondes</option>
+        <option value="15" selected>15 secondes</option>
+        <option value="20">20 secondes</option>
+      </select>
+
+      <button class="button primary" id="ideaBtn">✨ Générer une idée</button>
+      <div class="idea-box">
+        <div class="mini-label">IDÉE DU JOUR</div>
+        <p id="ideaText">Une ville futuriste brille au-dessus d'une mer de nuages, pendant que la caméra traverse lentement les lumières.</p>
+      </div>
+
+      <label for="caption">Description TikTok</label>
+      <textarea id="caption" rows="3">Tu visiterais cet endroit ? 🌌</textarea>
+      <label for="hashtags">Hashtags</label>
+      <input id="hashtags" value="#IA #AIVideo #UniversImaginaire #TikTokFR">
+      <button class="button secondary" id="copyBtn">Copier description + hashtags</button>
+
+      <div class="notice">
+        <strong>À savoir</strong>
+        <p>Cette version crée une animation visuelle originale dans ton navigateur. Elle n'utilise pas de modèle génératif d'images/vidéos : une IA vidéo complète et illimitée n'est pas garantie gratuitement.</p>
+      </div>
+    </section>
+
+    <section class="panel preview-panel">
+      <div class="preview-header">
+        <div>
+          <p class="eyebrow">ÉTAPE 02</p>
+          <h2>Aperçu vertical</h2>
+        </div>
+        <span class="live-dot">APERÇU</span>
+      </div>
+      <div class="preview-wrap">
+        <canvas id="scene" width="720" height="1280" aria-label="Aperçu animé vertical"></canvas>
+        <div class="preview-overlay">
+          <span class="overlay-tag">LAYON AI</span>
+          <p id="overlayCaption">Un autre monde t'attend…</p>
+        </div>
+      </div>
+      <div class="preview-actions">
+        <button class="button secondary" id="refreshBtn">↻ Relancer l'animation</button>
+        <button class="button primary" id="exportBtn">● Créer la vidéo</button>
+      </div>
+      <div class="progress-wrap hidden" id="progressWrap">
+        <div class="progress-track"><div id="progressBar"></div></div>
+        <p id="progressText">Préparation…</p>
+      </div>
+      <p class="small-note">Export : vidéo WebM verticale. Le format disponible dépend de ton navigateur.</p>
+    </section>
+  </main>
+
+  <section class="panel checklist">
+    <p class="eyebrow">ÉTAPE 03</p>
+    <h2>Publier sur TikTok</h2>
+    <ol>
+      <li>Télécharge la vidéo créée.</li>
+      <li>Ouvre TikTok ou TikTok Studio et importe le fichier.</li>
+      <li>Copie la description et les hashtags préparés ici.</li>
+      <li>Vérifie le résultat puis publie.</li>
+    </ol>
+    <p class="small-note">La publication directe automatique n'est pas activée dans ce prototype. Elle nécessite une intégration côté serveur et les autorisations TikTok appropriées.</p>
+  </section>
+
+  <footer>LAYON AI · Prototype local gratuit · Aucun compte ni clé API requis</footer>
+  <script src="app.js"></script>
+</body>
+</html>
